@@ -1,0 +1,44 @@
+/* Larger screen styles (media query for devices larger than 640px) */
+@media (min-width: 640px) {
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  
+    #menu {
+      display: none;
+    }
+  
+    nav {
+      display: flex;
+    }
+  
+    #nav-links {
+      display: flex;
+    }
+  
+    #nav-links li {
+      margin: 0 10px;
+    }
+  
+    #nav-links a {
+      font-size: 18px;
+    }
+  
+    main {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    section {
+      width: 45%;
+      margin: 10px 2.5%;
+    }
+  
+    footer {
+      text-align: left;
+      padding: 20px;
+    }
+  }
+  
