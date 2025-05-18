@@ -1,31 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chamber Directory</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Chamber of Commerce Directory | Local Business Listings</title>
+  
+  <meta name="description" content="Explore the Chamber of Commerce directory featuring local businesses and services. Find contact info, hours, and more in our business listings.">
+  <meta name="author" content="Your Name Here">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Chamber of Commerce Directory">
+  <meta property="og:description" content="Explore local businesses and services in the Chamber of Commerce directory. Connect with your community today.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://yourdomain.com/directory.html">
+
+  <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Chamber of Commerce</h1>
-    <nav>
-      <a href="../index.html">home</a>
-      <a href="#">Directory</a>
-      <a href="#">About</a>
-    </nav>
-  </header>
   <main>
+    <h1>Chamber of Commerce Directory</h1>
+    
+    <header>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="#">Directory</a>
+        <a href="#">About</a>
+      </nav>
+    </header>
+    
     <section class="controls">
       <button id="grid" title="Grid View">🔲</button>
       <button id="list" title="List View">📃</button>
     </section>
+    
     <section id="directory" class="grid-view"></section>
   </main>
+
   <footer>
     <p>&copy; <span id="year"></span> Chamber of Commerce</p>
   </footer>
-  <script src="js/directory.js"></script>
+
+  <script src="scripts/directory.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>

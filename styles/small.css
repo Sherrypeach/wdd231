@@ -4,6 +4,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f0f8fa;
+  color: #333; /* Add default text color for readability */
+  line-height: 1.5;
 }
 
 /* Header */
@@ -31,6 +33,7 @@ header span {
   margin-left: 1rem;
   font-size: 1.2rem;
   flex-grow: 1;
+  font-weight: 600;
 }
 
 /* Menu Button */
@@ -67,20 +70,24 @@ nav a {
   padding: 0.5rem 1rem;
   display: block;
   border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover,
 nav a.active {
   background-color: #006080;
+  outline: none;
 }
 
-/* Main content */
+/* Main Content */
 main {
   padding: 1rem;
 }
 
 main h1 {
   color: #004d66;
+  margin-bottom: 1rem;
 }
 
 section {
@@ -90,6 +97,9 @@ section {
 /* Course Buttons */
 #course-buttons {
   margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 #course-buttons button {
@@ -97,16 +107,17 @@ section {
   color: white;
   border: none;
   border-radius: 5px;
-  margin: 0.5rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
 #course-buttons button:hover {
   background-color: #006080;
 }
 
-/* Courses container */
+/* Courses Container */
 #courses {
   margin-top: 1rem;
 }
@@ -118,4 +129,5 @@ footer {
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+  font-size: 0.9rem;
 }

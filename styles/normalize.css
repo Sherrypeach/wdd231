@@ -1,0 +1,54 @@
+/* Normalize.css - baseline consistent styles across browsers */
+
+/* Box sizing reset for all elements */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set base font styles */
+body {
+  font-family: 'Roboto', Arial, sans-serif; /* Matches your Google Font */
+  line-height: 1.5;
+  background-color: #f9f9f9; /* subtle off-white background */
+  color: #333; /* dark gray text for readability */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove list styles for ul, ol */
+ul, ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Remove border from images and make responsive */
+img {
+  max-width: 100%;
+  display: block;
+  border-style: none;
+}
+
+/* Remove underline and color link styling reset */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove button default styles */
+button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button, textarea, select {
+  font: inherit;
+}
