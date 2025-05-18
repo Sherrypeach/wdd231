@@ -1,0 +1,60 @@
+{
+  "members": [
+    {
+      "name": "Bright Horizons Learning",
+      "address": "123 Main St, Springfield",
+      "phone": "555-1234",
+      "websiteUrl": "https://brighthorizons.com",
+      "image": "images/brighthorizons.png",
+      "membershipLevel": 3
+    },
+    {
+      "name": "TechSavvy Solutions",
+      "address": "456 Technology Ave, Silicon Valley",
+      "phone": "555-5678",
+      "websiteUrl": "https://techsavvy.com",
+      "image": "images/techsavvy.png",
+      "membershipLevel": 2
+    },
+    {
+      "name": "GreenLeaf Market",
+      "address": "789 Farm Rd, Greenville",
+      "phone": "555-9012",
+      "websiteUrl": "https://greenleafmarket.com",
+      "image": "images/greenleaf.png",
+      "membershipLevel": 1
+    },
+    {
+      "name": "Mountain Movers",
+      "address": "101 High Peak Dr, Boulder",
+      "phone": "555-3456",
+      "websiteUrl": "https://mountainmovers.com",
+      "image": "images/mountainmovers.png",
+      "membershipLevel": 2
+    },
+    {
+      "name": "Riverbend Café",
+      "address": "222 River St, Riverside",
+      "phone": "555-7890",
+      "websiteUrl": "https://riverbendcafe.com",
+      "image": "images/riverbend.png",
+      "membershipLevel": 1
+    },
+    {
+      "name": "Starlight Studios",
+      "address": "333 Hollywood Blvd, Los Angeles",
+      "phone": "555-1122",
+      "websiteUrl": "https://starlightstudios.com",
+      "image": "images/starlight.png",
+      "membershipLevel": 3
+    },
+    {
+      "name": "Ocean Breeze Travel",
+      "address": "444 Seaside Ave, Miami",
+      "phone": "555-3344",
+      "websiteUrl": "https://oceanbreezetravel.com",
+      "image": "images/oceanbreeze.png",
+      "membershipLevel": 2
+    }
+  ]
+}
