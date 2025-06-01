@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join - Timbuktu Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Timbuktu Chamber of Commerce</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../discover.html">Discover</a></li>
+                <li><a href="../directory.html">Business Directory</a></li>
+                <li><a href="../join.html">Join</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../podcast.html">Podcast</a></li>
+                <li><a href="../events.html">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Join the Chamber</h1>
+            <form method="get" action="../thankyou.html">
+                <label for="firstName">First Name:
+                    <input type="text" id="firstName" name="firstName" title="First Name" autocomplete="given-name" required>
+                </label>
+
+                <label for="lastName">Last Name:
+                    <input type="text" id="lastName" name="lastName" title="Last Name" autocomplete="family-name" required>
+                </label>
+
+                <label for="orgTitle">Organizational Title:
+                    <input type="text" id="orgTitle" name="orgTitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}">
+                </label>
+
+                <label for="email">Email:
+                    <input type="email" id="email" name="email" title="Email Address" autocomplete="email" required placeholder="example@email.com">
+                </label>
+
+                <label for="phone">Mobile Phone:
+                    <input type="tel" id="phone" name="phone" title="Mobile Phone" autocomplete="tel" required>
+                </label>
+
+                <label for="organization">Business/Organization Name:
+                    <input type="text" id="organization" name="organization" title="Organization Name" autocomplete="organization" required>
+                </label>
+
+                <label for="membership">Membership Level:
+                    <select id="membership" name="membership" title="Membership Level" required>
+                        <option value="np">NP Membership (No Fee)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label for="description">Business/Organization Description:
+                    <textarea id="description" name="description" title="Business Description"></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+                <input type="submit" value="Submit Membership">
+            </form>
+        </section>
+
+        <section class="membership-cards">
+            <div class="card" id="npCard">
+                <h2>NP Membership</h2>
+                <p><a href="#npModal">More Info</a></p>
+            </div>
+            <div class="card" id="bronzeCard">
+                <h2>Bronze Membership</h2>
+                <p><a href="#bronzeModal">More Info</a></p>
+            </div>
+            <div class="card" id="silverCard">
+                <h2>Silver Membership</h2>
+                <p><a href="#silverModal">More Info</a></p>
+            </div>
+            <div class="card" id="goldCard">
+                <h2>Gold Membership</h2>
+                <p><a href="#goldModal">More Info</a></p>
+            </div>
+        </section>
+
+        <!-- Modals -->
+        <div id="npModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>NP Membership Benefits</h2>
+                <ul>
+                    <li>Access to networking events</li>
+                    <li>Participation in community service</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="bronzeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Bronze Membership Benefits</h2>
+                <ul>
+                    <li>All NP Benefits</li>
+                    <li>Business listing in directory</li>
+                    <li>Event discounts</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="silverModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Silver Membership Benefits</h2>
+                <ul>
+                    <li>All Bronze Benefits</li>
+                    <li>Advertising on website</li>
+                    <li>Spotlight features</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="goldModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Gold Membership Benefits</h2>
+                <ul>
+                    <li>All Silver Benefits</li>
+                    <li>Priority event sponsorship</li>
+                    <li>Personalized training workshops</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Timbuktu Chamber of Commerce &copy; 20xx | WDD231 Class Project | Cas Perche</p>
+        <p>Last Modification: 10/21/202X 22:12:35</p>
+    </footer>
+
+    <script>
+        document.getElementById('timestamp').value = new Date().toISOString();
+
+        const modals = document.querySelectorAll('.modal');
+        const links = document.querySelectorAll('.card a');
+        const closeButtons = document.querySelectorAll('.close');
+
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const modal = document.querySelector(link.getAttribute('href'));
+                modal.style.display = 'flex';
+            });
+        });
+
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                modals.forEach(modal => modal.style.display = 'none');
+            });
+        });
+
+        window.addEventListener('click', (e) => {
+            modals.forEach(modal => {
+                if (e.target == modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+
+        window.onload = () => {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.transition = 'opacity 1s ease, transform 1s ease';
+                    card.style.opacity = 1;
+                    card.style.transform = 'translateY(0)';
+                }, index * 300);
+            });
+        };
+    </script>
+</body>
+</html>

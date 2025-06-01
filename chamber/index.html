@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timbuktu Chamber of Commerce</title>
+  <meta name="description" content="Welcome to the Timbuktu Chamber of Commerce - Promoting local businesses and community growth.">
+  <meta name="author" content="Cas Perche">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlight.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Timbuktu Chamber of Commerce</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Timbuktu City View" class="hero-img">
+      <div class="hero-cta">
+        <h1>Welcome to Timbuktu Chamber of Commerce</h1>
+        <a href="join.html" class="cta-button">Join the Chamber</a>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events">
+      <h2>Upcoming Events</h2>
+      <ul>
+        <li>Business Networking Luncheon - July 10</li>
+        <li>Small Business Workshop - August 5</li>
+        <li>Annual Community Festival - September 15</li>
+      </ul>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather">
+      <h2>Current Weather</h2>
+      <div id="current-weather">
+        <!-- Weather will be injected here by JS -->
+      </div>
+      <div id="forecast">
+        <!-- 3-day Forecast will be injected here by JS -->
+      </div>
+    </section>
+
+    <!-- Spotlights Section -->
+    <section class="spotlights">
+      <h2>Business Spotlights</h2>
+      <div id="spotlight-cards">
+        <!-- Spotlight cards will load here by JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Timbuktu Chamber of Commerce | Cas Perche</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = `Last Updated: ${document.lastModified}`;
+  </script>
+</body>
+</html>

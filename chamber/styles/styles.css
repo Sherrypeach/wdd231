@@ -3,6 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f4f4f4;
 }
 
 /* Header and Footer */
@@ -14,17 +15,34 @@ footer {
   text-align: center;
 }
 
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #004d66;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
 nav a {
   color: white;
-  margin: 0 10px;
   text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
 }
 
-nav a:hover {
-  text-decoration: underline;
+nav a:hover,
+nav a.active {
+  background-color: #006d77;
+  border-radius: 5px;
 }
 
-/* Main Controls */
+/* Controls */
 .controls {
   text-align: center;
   margin: 1rem;
@@ -79,13 +97,137 @@ nav a:hover {
   margin: 0 auto 1rem;
 }
 
-/* Responsive Text */
+/* Text inside cards */
 .card h2,
 .card p {
   margin: 0.5rem 0;
 }
 
-/* Footer Year */
+/* Footer */
 footer p {
   margin: 0;
+}
+
+/* ---- NEW STYLES FOR HOMEPAGE ---- */
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Fixed height */
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the box without stretching */
+}
+
+.hero-cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 77, 102, 0.7);
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+.hero-cta h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  background-color: #00b4d8;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #0077b6;
+}
+
+/* Sections (Events, Weather, Spotlights) */
+section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #004d66;
+  border-bottom: 2px solid #00b4d8;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* Events List */
+.events ul {
+  list-style: none;
+  padding: 0;
+}
+
+.events ul li {
+  background-color: #e0f7fa;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Weather Section */
+.weather #current-weather,
+.weather #forecast {
+  background-color: #e0f7fa;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+/* Spotlights Section */
+#spotlight-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+#spotlight-cards .card {
+  background-color: #f1f1f1;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+#spotlight-cards .card img {
+  max-width: 100px;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: 200px;
+  }
+
+  .hero-cta h1 {
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+  }
 }
