@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Central Park",
+        "address": "New York, NY 10022",
+        "description": "A beautiful urban park with sprawling green spaces and attractions.",
+        "image": "images/central-park.webp"
+    },
+    {
+        "name": "Statue of Liberty",
+        "address": "Liberty Island, New York, NY 10004",
+        "description": "An iconic symbol of freedom.",
+        "image": "images/statue-liberty.webp"
+    },
+    {
+        "name": "Times Square",
+        "address": "Manhattan, NY 10036",
+        "description": "A bustling hub of commerce, entertainment, and tourism.",
+        "image": "images/times-square.webp"
+    },
+    {
+        "name": "Brooklyn Bridge",
+        "address": "New York, NY 10038",
+        "description": "A historic bridge connecting Manhattan and Brooklyn.",
+        "image": "images/brooklyn-bridge.webp"
+    },
+    {
+        "name": "Empire State Building",
+        "address": "20 W 34th St, New York, NY 10001",
+        "description": "A famous skyscraper offering stunning views of the city.",
+        "image": "images/empire-state.webp"
+    },
+    {
+        "name": "Rockefeller Center",
+        "address": "45 Rockefeller Plaza, New York, NY 10111",
+        "description": "A large complex known for its architecture and history.",
+        "image": "images/rockefeller-center.webp"
+    },
+    {
+        "name": "Broadway",
+        "address": "Manhattan, NY 10036",
+        "description": "The heart of the American theatre industry.",
+        "image": "images/broadway.webp"
+    },
+    {
+        "name": "The Met Museum",
+        "address": "1000 5th Ave, New York, NY 10028",
+        "description": "The largest art museum in the United States.",
+        "image": "images/met-museum.webp"
+    }
+]
