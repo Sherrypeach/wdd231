@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Submission</title>
+  <meta name="description" content="Form submission data." />
+  <meta name="author" content="Cas Perche" />
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header><h1>Contact Details</h1></header>
+  <main>
+    <section>
+      <h2>Thank you for reaching out!</h2>
+      <p>Below is the information you submitted:</p>
+      <pre id="form-data"></pre>
+    </section>
+  </main>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const output = document.getElementById('form-data');
+    let result = '';
+    for (const [key, val] of params) {
+      result += `${key}: ${val}\n`;
+    }
+    output.textContent = result;
+  </script>
+</body>
+</html>
