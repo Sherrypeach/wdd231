@@ -2,22 +2,20 @@
 <html lang="en-us">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <title>Fashion Forward | Home</title>
-  <meta name="description" content="Fashion Forward: stay ahead of modern style with trends, inspiration, and tips." />
-  <meta name="author" content="Yirut Perche" />
-  <meta property="og:title" content="Fashion Forward" />
-  <meta property="og:description" content="Explore the latest fashion trends, style inspiration, and outfit ideas." />
-  <link rel="icon" href="images/favicon.ico" />
+  <meta name="description" content="Stay ahead in style with Fashion Forward—trends, tips, inspiration.">
+  <meta name="author" content="Cas Perche">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" sizes="32x32">
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
   <header>
     <h1>Fashion Forward</h1>
-    <button id="nav-toggle" aria-controls="primary-nav" aria-expanded="false">
-      <span class="sr-only">Menu</span>
-      &#9776;
-    </button>
+    <button id="nav-toggle" aria-controls="primary-nav" aria-expanded="false">&#9776;</button>
     <nav id="primary-nav">
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
@@ -29,14 +27,51 @@
   </header>
   <main>
     <section class="hero">
-      <h2>Welcome to Fashion Forward</h2>
-      <p>Your hub for the latest in style and inspiration.</p>
+      <h2 class="hero-title">Welcome to Fashion Forward</h2>
+      <p class="hero-sub">Your hub for cutting-edge style &amp; inspiration.</p>
     </section>
+    <section class="featured">
+        <h2>Featured Trends</h2>
+        <div class="grid-container">
+          <a class="card" href="trends.html#item-1">
+            <img src="images/trench.jpg" alt="Classic Trench Coat">
+            <h3>Classic Trench Coat</h3>
+          </a>
+          <a class="card" href="trends.html#item-2">
+            <img src="images/item2.jpg" alt="Silk Scarf">
+            <h3>Silk Scarf</h3>
+          </a>
+        </div>
+        <a href="trends.html" class="btn-outline">View All Trends →</a>
+      </section>
   </main>
   <footer>
     <p>&copy; 2025 Fashion Forward</p>
-    <p><a href="README.md">Attributions</a> | <a href="#">Video Demo</a></p>
+    <p>
+      <a
+        href="https://drive.google.com/file/d/1zz-oSg2vdcC5awnp6AiDZbQJ-899JZse/view?usp=sharing"
+        target="_blank"
+        rel="noopener"
+      >
+        Video Demo
+      </a>
+    </p>
   </footer>
+  
+  <section class="highlights">
+    <div>
+      <img src="images/icon-clock.svg" alt="Clock icon">
+      <p>Updated Weekly</p>
+    </div>
+    <div>
+      <img src="images/icon-star.svg" alt="Star icon">
+      <p>Curated Picks</p>
+    </div>
+    <div>
+      <img src="images/icon-phone.svg" alt="Phone icon">
+      <p>Mobile-Ready</p>
+    </div>
+  </section>
   <script type="module" src="scripts/main.js"></script>
 </body>
 </html>

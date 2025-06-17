@@ -1,3 +1,24 @@
 [
-  { "id": 1, "name": "Classic Trench Coat", "img": "images/trench.jpg", "price": "$120", "desc": "Timeless beige trench coat perfect for any season." }
-]
+    {
+      "id": 1,
+      "name": "Classic Trench Coat",
+      "img": "images/trench.jpg",
+      "price": "$120",
+      "desc": "Timeless beige trench coat perfect for any season."
+    },
+    {
+      "id": 2,
+      "name": "Silk Scarf",
+      "img": "images/item2.jpg",
+      "price": "$45",
+      "desc": "Luxurious silk scarf in vibrant prints."
+    },
+    {
+      "id": 3,
+      "name": "Denim Jacket",
+      "img": "images/item3.jpg",
+      "price": "$85",
+      "desc": "Classic blue denim jacket, unisex fit."
+    }
+  ]
+  

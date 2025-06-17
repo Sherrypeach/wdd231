@@ -2,30 +2,48 @@
 <html lang="en-us">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact Submission</title>
-  <meta name="description" content="Form submission data." />
-  <meta name="author" content="Cas Perche" />
-  <link rel="icon" href="images/favicon.ico" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact | Fashion Forward</title>
+  <meta name="description" content="Contact details for Fashion Forward.">
+  <meta name="author" content="Yirut Perche">
+  <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <header><h1>Contact Details</h1></header>
+  <header>
+    <h1>Contact Details</h1>
+    <button id="nav-toggle" aria-controls="primary-nav" aria-expanded="false">☰</button>
+    <nav id="primary-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trends.html">Trends</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
   <main>
-    <section>
+    <section class="contact-info">
       <h2>Thank you for reaching out!</h2>
-      <p>Below is the information you submitted:</p>
+      <p>We’d love to hear from you. Here’s how you can get in touch:</p>
+      <ul>
+        <li><strong>Email:</strong> info@fashionforward.com</li>
+        <li><strong>Phone:</strong> (555) 123-4567</li>
+        <li><strong>Address:</strong> 123 Fashion Ave, New York, NY 10001</li>
+      </ul>
+      <p>If you submitted the form, your details are below:</p>
       <pre id="form-data"></pre>
+      <a href="index.html" class="download-btn">← Back to Home</a>
     </section>
   </main>
   <script>
+    // Display submitted form data (if any)
     const params = new URLSearchParams(window.location.search);
-    const output = document.getElementById('form-data');
-    let result = '';
-    for (const [key, val] of params) {
-      result += `${key}: ${val}\n`;
+    let out = '';
+    for (const [k, v] of params) {
+      out += `${k}: ${v}\n`;
     }
-    output.textContent = result;
+    document.getElementById('form-data').textContent = out || 'No form data submitted.';
   </script>
 </body>
 </html>
